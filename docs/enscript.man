@@ -430,6 +430,9 @@ ISO\-8859\-9 (ISO Latin5)
 .B 885910, latin6
 ISO\-8859\-10 (ISO Latin6)
 .TP 8
+.B 885915, latin9
+ISO\-8859\-15 (ISO Latin9)
+.TP 8
 .B ascii
 7\-bit ascii
 .TP 8

@@ -806,6 +806,7 @@ EncodingRegistry encodings[] =
   {{"88597", "greek", NULL},		ENC_ISO_8859_7,		'\n', 8},
   {{"88599", "latin5", NULL},		ENC_ISO_8859_9,		'\n', 8},
   {{"885910", "latin6", NULL},		ENC_ISO_8859_10,	'\n', 8},
+  {{"885915", "latin9", NULL},		ENC_ISO_8859_15,	'\n', 8},
   {{"ascii", NULL, NULL},		ENC_ASCII, 		'\n', 8},
   {{"asciifise", "asciifi", "asciise"},	ENC_ASCII_FISE,		'\n', 8},
   {{"asciidkno", "asciidk", "asciino"},	ENC_ASCII_DKNO,		'\n', 8},

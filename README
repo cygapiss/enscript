@@ -116,6 +116,7 @@ Enscript supports following character sets:
   - ISO-8859-4		ISO Latin4
   - ISO-8859-5		ISO Cyrillic
   - ISO-8859-7		ISO Greek
+  - ISO-8859-15		ISO Latin9
   - ascii		7 bit ascii
   - ascii fi se		7 bit ascii with following encodings:
 			  '{'  = ä (adieresis)

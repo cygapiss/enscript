@@ -647,6 +647,10 @@ afm_font_encoding (AFMFont font, AFMEncoding enc, unsigned int flags)
       apply_encoding (font, afm_885910_encoding, flags);
       break;
 
+    case AFM_ENCODING_ISO_8859_15:
+      apply_encoding (font, afm_885915_encoding, flags);
+      break;
+
     case AFM_ENCODING_IBMPC:
       apply_encoding (font, afm_ibmpc_encoding, flags);
       break;
