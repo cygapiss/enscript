@@ -92,6 +92,19 @@ static struct
   if (token2 == NULL) 							\
     CFG_FATAL ((stderr, _("missing argument: %s"), token));
 
+void search_and_replace(char *str, char *search, char *replace) {
+    char *pos;
+    int search_len = strlen(search);
+    int replace_len = strlen(replace);
+
+    while ((pos = strstr(str, search)) != NULL) {
+        char tmp[strlen(str) + 1];
+        strcpy(tmp, pos + search_len);
+        strcpy(pos, replace);
+        strcpy(pos + replace_len, tmp);
+        str = pos + replace_len;
+    }
+}
 int
 read_config (char *path, char *file)
 {
@@ -138,6 +151,7 @@ read_config (char *path, char *file)
 	{
 	  token2 = GET_TOKEN (NULL);
 	  CHECK_TOKEN ();
+	  search_and_replace(token2,"$HOME",getenv("HOME"));
 	  xfree (afm_path);
 	  afm_path = xstrdup (token2);
 	}
