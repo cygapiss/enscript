@@ -23,6 +23,7 @@
  */
 
 #include "gsint.h"
+#include<langinfo.h>
 
 /*
  * Types and definitions.
@@ -601,6 +602,7 @@ paste_file (char *name, char *suffix)
 				  (void **) &cp2))
 		  {
 		    /* Not it is not,  we must include this resource. */
+#include<langinfo.h>
 		    fprintf (ofp, "%%%%IncludeResource: font %s\n", cp);
 
 		    /*

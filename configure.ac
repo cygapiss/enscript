@@ -14,6 +14,8 @@ AC_USE_SYSTEM_EXTENSIONS
 
 AC_C_CONST
 AC_FUNC_ALLOCA
+dnl its save to say that in 2023 all compilers support prototypes
+AC_DEFINE([PROTOTYPES], [1], [Define to 1 if your compiler supports function prototypes.])
 
 AC_HEADER_STDC
 AC_CHECK_HEADERS([string.h stdlib.h unistd.h stdarg.h math.h pwd.h])
@@ -112,8 +114,8 @@ AC_ARG_WITH(ps-level,
 AC_SUBST(PSLEVEL)
 
 dnl Internationalization.
-AM_GNU_GETTEXT
-AM_GNU_GETTEXT_VERSION([0.17])
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.21.1])
 
 dnl Path separator character.
 AC_DEFINE_UNQUOTED([PATH_SEPARATOR], [':'],
@@ -134,7 +136,7 @@ dnl substitutions
 AC_SUBST(CFLAGS)
 AC_SUBST(LDFLAGS)
 
-AC_CONFIG_FILES([Makefile  po/Makefile.in intl/Makefile po/Makefile \
+AC_CONFIG_FILES([Makefile      po/Makefile.in\
 	compat/Makefile \
 	afm/Makefile \
 	afmlib/Makefile \
