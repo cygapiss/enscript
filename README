@@ -231,3 +231,16 @@ option `DownloadFont: name'.
   option `-o' lists missing characters.  In GNU enscript `-o' is an
   alias for `-p' and missing characters are listed with an option `-O'.
 
+* Example Usage:
+
+1)	Defaults: create document in Helvetica 14 with default headers
+
+		$ enscript -f Helvetica@14 -o myfile.ps myfile.txt
+
+2)	Create document with a Latin 9 font encoding from example utf-8 with no header
+
+		$ cat myfile.txt | iconv -f utf-8 -t latin9 | enscript -f FreeMono@14 -B -o myfile.ps
+
+	Don't forget to install the latin9 font afm! 
+	You can use the tool convertfontto.sh
+	
