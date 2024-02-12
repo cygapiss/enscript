@@ -978,6 +978,11 @@ read_font_info (void)
 					enc_flags);
 	      break;
 
+	    case ENC_ISO_8859_15:
+	      (void) afm_font_encoding (font, AFM_ENCODING_ISO_8859_15,
+					enc_flags);
+	      break;
+
 	    case ENC_ASCII:
 	      (void) afm_font_encoding (font, AFM_ENCODING_ASCII, enc_flags);
 	      break;
