@@ -498,7 +498,9 @@ value is an empty string ("") but some programs require that the
 .TP 8
 .B \-\-footer=\f2footer\f3
 Use the text \f2footer\f1 as a page footer.  Otherwise the option
-works like the \f3\-\-header\f1 option
+works like the \f3\-\-header\f1 option. As a default, the page has no footer.
+Setting this option does not necessary shows any footer strings in the output.
+It depends on the selected fancy header ('.hdr' file) whether it supports footer strings or not.
 .TP 8
 .B \-\-h\-column\-height=\f2height\f3
 Set the horizontal column height to be \f2height\f1 PostScript
