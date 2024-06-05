@@ -1,8 +1,19 @@
+2024-02-12  Wim Stockman <wim@thinkerwim.org>
+	* compat/getopt.c: Solving issue with built-in 'strlen' function
+
 2023-03-13  gettextize  <bug-gnu-gettext@gnu.org>
 
 	* Makefile.am (EXTRA_DIST): Add m4/ChangeLog.
 	* configure.ac (AC_CONFIG_FILES): Add po/Makefile.in.
 	(AM_GNU_GETTEXT_VERSION): Bump to 0.21.1.
+
+2023-03-13  Wim Stockman <wim@thinkerwim.org>
+	* tools/convertfontto.sh: Added a script to make it easy to convert
+	ttf or otf font to your choice of encoding
+	* src/util.c: Added $HOME variable to be used in AFMPATH
+
+2023-03-10  Wim Stockman <wim@thinkerwim.org>
+	* 885915.txt: Added Latin9 ISO-8859-15 support
 
 2014-07-18  James Cloos  <cloos@jhcloos.com>
 
@@ -71,7 +82,7 @@
 	* Makefile.am (SUBDIRS): Move intl to be built before compat.
 
 	* states/Makefile.am: Use $(datadir) instead of $(prefix)/share.
-	  Savannah bug #31609.
+	Savannah bug #31609.
 	* src/Makefile.am: Likewise.
 
 	* src/Makefile.am: Remove ansi2knr option and supporting files.
@@ -483,7 +494,7 @@
 1996-07-28  Markku Rossi  <mtr@ngs.ngs.fi>
 
 	* Changed __P() macro to ___P() in all files where it was used.
-  	Now we won't clash with solaris' math.h which defines __P().
+	Now we won't clash with solaris' math.h which defines __P().
 
 1996-06-13  Markku Rossi  <mtr@ngs.ngs.fi>
 
@@ -504,7 +515,7 @@
 	* Automake-0.31.
 
 	* configure.in: Removed CFLAGS and LDFLAGS defaults, use whatever
- 	autoconf gives to us.
+	autoconf gives to us.
 
 1996-03-11  Markku Rossi  <mtr@ngs.fi>
 
@@ -513,9 +524,9 @@
 1996-02-25  Markku Rossi  <mtr@ngs.fi>
 
 	* Reorganized source tree:
-	  - enscript source is moved to the new `src' sub-directory
-	  - `afm' directory is renamed to `afmlib'
-	  - `afmfiles' directory is renamed to `afm'
+	- enscript source is moved to the new `src' sub-directory
+	- `afm' directory is renamed to `afmlib'
+	- `afmfiles' directory is renamed to `afm'
 
 	* Renamed program to `GNU enscript'.
 
