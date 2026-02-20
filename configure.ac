@@ -10,6 +10,9 @@ AC_PROG_INSTALL
 
 AC_PROG_CC
 
+# Force C89 standard and fix modern GCC global variable handling
+CFLAGS="$CFLAGS -std=c89"
+
 AC_USE_SYSTEM_EXTENSIONS
 
 AC_C_CONST
