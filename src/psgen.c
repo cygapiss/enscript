@@ -46,6 +46,9 @@
 #define F_EPSF_SCALE_X			0x40
 #define F_EPSF_SCALE_Y			0x80
 
+#ifndef PATH_MAX
+#define PATH_MAX 4096
+#endif
 
 /* Predicate to check if we are at the correct slice. */
 #define CORRECT_SLICE() (slicing == 0 || current_slice == slice)
