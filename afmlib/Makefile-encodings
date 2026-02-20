@@ -21,7 +21,7 @@
 # along with Enscript.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-ENCODINGS = e_88591.c e_88592.c e_88593.c e_88594.c e_88595.c \
+ENCODINGS = e_88591.c e_88591euro.c e_88592.c e_88593.c e_88594.c e_88595.c \
 e_88597.c e_88599.c e_885910.c e_885915.c e_pc.c e_mac.c e_vms.c e_hp8.c e_koi8.c
 
 all: $(ENCODINGS)
@@ -31,6 +31,9 @@ clean:
 
 e_88591.c: make-encoding.pl ../88591.txt
 	./make-encoding.pl ../88591.txt >e_88591.c
+
+e_88591euro.c: make-encoding.pl ../88591euro.txt
+	./make-encoding.pl ../88591euro.txt >e_88591euro.c
 
 e_88592.c: make-encoding.pl ../88592.txt
 	./make-encoding.pl ../88592.txt >e_88592.c

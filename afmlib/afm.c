@@ -619,6 +619,10 @@ afm_font_encoding (AFMFont font, AFMEncoding enc, unsigned int flags)
       apply_encoding (font, afm_88591_encoding, flags);
       break;
 
+    case AFM_ENCODING_ISO_8859_1euro:
+      apply_encoding (font, afm_88591_encoding, flags);
+      break;
+
     case AFM_ENCODING_ISO_8859_2:
       apply_encoding (font, afm_88592_encoding, flags);
       break;

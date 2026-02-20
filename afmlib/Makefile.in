@@ -144,12 +144,12 @@ libafm_a_AR = $(AR) $(ARFLAGS)
 libafm_a_RANLIB = $(RANLIB)
 libafm_a_LIBADD =
 am_libafm_a_OBJECTS = afm.$(OBJEXT) afmparse.$(OBJEXT) \
-	strhash.$(OBJEXT) e_88591.$(OBJEXT) e_88592.$(OBJEXT) \
-	e_88593.$(OBJEXT) e_88594.$(OBJEXT) e_88595.$(OBJEXT) \
-	e_88597.$(OBJEXT) e_88599.$(OBJEXT) e_885915.$(OBJEXT) \
-	e_885910.$(OBJEXT) e_pc.$(OBJEXT) e_mac.$(OBJEXT) \
-	e_vms.$(OBJEXT) e_hp8.$(OBJEXT) e_koi8.$(OBJEXT) \
-	deffont.$(OBJEXT)
+	strhash.$(OBJEXT) e_88591euro.$(OBJEXT) e_88591.$(OBJEXT) \
+	e_88592.$(OBJEXT) e_88593.$(OBJEXT) e_88594.$(OBJEXT) \
+	e_88595.$(OBJEXT) e_88597.$(OBJEXT) e_88599.$(OBJEXT) \
+	e_885915.$(OBJEXT) e_885910.$(OBJEXT) e_pc.$(OBJEXT) \
+	e_mac.$(OBJEXT) e_vms.$(OBJEXT) e_hp8.$(OBJEXT) \
+	e_koi8.$(OBJEXT) deffont.$(OBJEXT)
 libafm_a_OBJECTS = $(am_libafm_a_OBJECTS)
 am_afmtest_OBJECTS = afmtest.$(OBJEXT)
 afmtest_OBJECTS = $(am_afmtest_OBJECTS)
@@ -172,12 +172,13 @@ am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/afm.Po ./$(DEPDIR)/afmparse.Po \
 	./$(DEPDIR)/afmtest.Po ./$(DEPDIR)/deffont.Po \
 	./$(DEPDIR)/e_88591.Po ./$(DEPDIR)/e_885910.Po \
-	./$(DEPDIR)/e_885915.Po ./$(DEPDIR)/e_88592.Po \
-	./$(DEPDIR)/e_88593.Po ./$(DEPDIR)/e_88594.Po \
-	./$(DEPDIR)/e_88595.Po ./$(DEPDIR)/e_88597.Po \
-	./$(DEPDIR)/e_88599.Po ./$(DEPDIR)/e_hp8.Po \
-	./$(DEPDIR)/e_koi8.Po ./$(DEPDIR)/e_mac.Po ./$(DEPDIR)/e_pc.Po \
-	./$(DEPDIR)/e_vms.Po ./$(DEPDIR)/strhash.Po
+	./$(DEPDIR)/e_885915.Po ./$(DEPDIR)/e_88591euro.Po \
+	./$(DEPDIR)/e_88592.Po ./$(DEPDIR)/e_88593.Po \
+	./$(DEPDIR)/e_88594.Po ./$(DEPDIR)/e_88595.Po \
+	./$(DEPDIR)/e_88597.Po ./$(DEPDIR)/e_88599.Po \
+	./$(DEPDIR)/e_hp8.Po ./$(DEPDIR)/e_koi8.Po \
+	./$(DEPDIR)/e_mac.Po ./$(DEPDIR)/e_pc.Po ./$(DEPDIR)/e_vms.Po \
+	./$(DEPDIR)/strhash.Po
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -350,7 +351,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 noinst_LIBRARIES = libafm.a
-libafm_a_SOURCES = afm.c afmparse.c strhash.c e_88591.c e_88592.c	\
+libafm_a_SOURCES = afm.c afmparse.c strhash.c e_88591euro.c e_88591.c e_88592.c	\
 e_88593.c e_88594.c e_88595.c e_88597.c e_88599.c e_885915.c e_885910.c e_pc.c	\
 e_mac.c e_vms.c e_hp8.c e_koi8.c deffont.c
 
@@ -421,6 +422,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/e_88591.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/e_885910.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/e_885915.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/e_88591euro.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/e_88592.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/e_88593.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/e_88594.Po@am__quote@ # am--include-marker
@@ -586,6 +588,7 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/e_88591.Po
 	-rm -f ./$(DEPDIR)/e_885910.Po
 	-rm -f ./$(DEPDIR)/e_885915.Po
+	-rm -f ./$(DEPDIR)/e_88591euro.Po
 	-rm -f ./$(DEPDIR)/e_88592.Po
 	-rm -f ./$(DEPDIR)/e_88593.Po
 	-rm -f ./$(DEPDIR)/e_88594.Po
@@ -650,6 +653,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/e_88591.Po
 	-rm -f ./$(DEPDIR)/e_885910.Po
 	-rm -f ./$(DEPDIR)/e_885915.Po
+	-rm -f ./$(DEPDIR)/e_88591euro.Po
 	-rm -f ./$(DEPDIR)/e_88592.Po
 	-rm -f ./$(DEPDIR)/e_88593.Po
 	-rm -f ./$(DEPDIR)/e_88594.Po

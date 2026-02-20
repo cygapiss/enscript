@@ -274,6 +274,7 @@ typedef enum
 {
   AFM_ENCODING_DEFAULT,		/* Font's default encoding. */
   AFM_ENCODING_ISO_8859_1,	/* ISO-8859-1 */
+  AFM_ENCODING_ISO_8859_1euro,	/* ISO-8859-1euro */
   AFM_ENCODING_ISO_8859_2,	/* ISO-8859-2 */
   AFM_ENCODING_ISO_8859_3,	/* ISO-8859-3 */
   AFM_ENCODING_ISO_8859_4,	/* ISO-8859-4 */

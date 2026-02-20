@@ -708,6 +708,11 @@ int append_ctrl_D = 0;
 int clean_7bit = 1;
 
 /*
+ * Specify to alter latin1 to change currency to euro symbol
+ * and change utf-8 euro to latin1 codepoint 164
+ */
+int eurolatin1 = 0;
+/*
  * FormFeedType: type
  *
  * Specify what to do when a formfeed character is encountered from the
@@ -799,6 +804,7 @@ double bggray = 1.0;
 EncodingRegistry encodings[] =
 {
   {{"88591", "latin1", NULL},		ENC_ISO_8859_1,		'\n', 8},
+  {{"88591euro", "latin1euro", NULL},	ENC_ISO_8859_1euro,	'\n', 8},
   {{"88592", "latin2", NULL},		ENC_ISO_8859_2,		'\n', 8},
   {{"88593", "latin3", NULL},		ENC_ISO_8859_3,		'\n', 8},
   {{"88594", "latin4", NULL},		ENC_ISO_8859_4,		'\n', 8},
@@ -908,6 +914,7 @@ static struct option long_options[] =
   {"ul-gray",			required_argument,	0, 129},
   {"ul-position",		required_argument,	0, 133},
   {"ul-style",			required_argument,	0, 137},
+  {"utf8-euro",			no_argument,		0, 157},
 
   /* Backwards compatiblity options. */
   {"pretty-print",		optional_argument,	0, 'E'},
@@ -2506,6 +2513,10 @@ single character: %s"),
 	case 156:		/* continuous page numbers */
 	  continuous_page_numbers = 1;
 	  break;
+
+	case 157:
+	   eurolatin1 = 1 ;
+	    break;
 
 	case '?':		/* Errors found during getopt_long(). */
 	option_error:

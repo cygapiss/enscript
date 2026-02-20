@@ -169,6 +169,7 @@ typedef enum
 typedef enum
 {
   ENC_ISO_8859_1,
+  ENC_ISO_8859_1euro,
   ENC_ISO_8859_2,
   ENC_ISO_8859_3,
   ENC_ISO_8859_4,
@@ -466,6 +467,7 @@ extern char *toc_fmt_string;
 extern unsigned int file_align;
 extern int slicing;
 extern unsigned int slice;
+extern int eurolatin1;
 
 extern char *states_binary;
 extern int states_color;

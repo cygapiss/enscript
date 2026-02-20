@@ -1758,10 +1758,30 @@ get_next_token (InputStream *is, double linestart, double linepos,
 	      done = DONE_DONE;
 	      break;
 	    }
+		if (eurolatin1){
+			if (ch ==0xE2) {
+/*				MESSAGE (0, (stderr, _("Detect utf-8 \"%d\", using one\n"), ch)); */
+				int ch2 = is_getc(is);
+				if (ch2 == 0x82){
+/*					MESSAGE (0, (stderr, _("Detect utf-8 \"%d\", using two\n"), ch2)); */
+					int ch3 = is_getc(is);
+					if (ch3 == 0xAC) {
+/*						MESSAGE (0, (stderr, _("Detect utf-8 Euro symbol\"%d\", using default\n"), ch3)); */
+						ch = 164;
+					}
+					else {
+						is_ungetc(ch3,is);
+						is_ungetc(ch2,is);
+					}
+				}
+				else {is_ungetc(ch2,is);}
+			}
+		}
 
 	  /* Check normal characters. */
 	  if (EXISTS (ch))
 	    {
+/*		MESSAGE (0, (stderr, _("Wat Symbol is here\"%d\", \n"), ch)); */
 	      if (FITS_ON_LINE (ch))
 		{
 		  /*

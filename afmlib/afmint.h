@@ -249,6 +249,7 @@ struct encoding_table_st
 typedef struct encoding_table_st AFMEncodingTable;
 
 extern AFMEncodingTable afm_88591_encoding[];
+extern AFMEncodingTable afm_88591euro_encoding[];
 extern AFMEncodingTable afm_88592_encoding[];
 extern AFMEncodingTable afm_88593_encoding[];
 extern AFMEncodingTable afm_88594_encoding[];

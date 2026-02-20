@@ -942,6 +942,10 @@ read_font_info (void)
 	      (void) afm_font_encoding (font, AFM_ENCODING_ISO_8859_1,
 					enc_flags);
 	      break;
+	    case ENC_ISO_8859_1euro:
+	      (void) afm_font_encoding (font, AFM_ENCODING_ISO_8859_1euro,
+					enc_flags);
+	      break;
 
 	    case ENC_ISO_8859_2:
 	      (void) afm_font_encoding (font, AFM_ENCODING_ISO_8859_2,

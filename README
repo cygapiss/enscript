@@ -244,3 +244,14 @@ option `DownloadFont: name'.
 	Don't forget to install the latin9 font afm! 
 	You can use the tool convertfontto.sh
 	
+* New option convert Euro UTF-8 symbol to latin code point
+	--utf8-euro
+* Added Encoding for hybrid latin1 euro => latin1euro
+  this change the currency glyph to the euro glyph
+
+So if you have an UTF-8 english file with some euro symbols you don't need to convert 
+it anymore to latin1 with iconv. 
+You can just runt the command:
+	enscript -Xlatin1euro --utf8-euro -o yourpostscript.ps yourtextfile.txt
+
+
