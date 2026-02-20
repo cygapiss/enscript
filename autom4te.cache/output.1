@@ -4868,6 +4868,9 @@ fi
 
 
 
+# Force C89 standard and fix modern GCC global variable handling
+CFLAGS="$CFLAGS -std=c89"
+
 
 ac_header= ac_cache=
 for ac_item in $ac_header_c_list
