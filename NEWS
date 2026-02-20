@@ -2,6 +2,13 @@
 		      What's new in GNU enscript
 		      --------------------------
 
+Summary of changes in enscript version 1.7.0:
+
+* Added support for Latin 9
+* Added script to generate custom AFM files for custom 
+  fonts in tools directory
+  called convertfontto.sh
+
 Summary of changes in enscript version 1.6.6:
 
 * Add afm/MustRead.html, containing licensing information for Adobe

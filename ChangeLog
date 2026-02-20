@@ -1,3 +1,6 @@
+2026-02-20  Wim Stockman <wim@thinkerwim.org>
+	* configure.ac: Release 1.7.0.
+
 2024-02-12  Wim Stockman <wim@thinkerwim.org>
 	* compat/getopt.c: Solving issue with built-in 'strlen' function
 
