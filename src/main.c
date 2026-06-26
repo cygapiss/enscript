@@ -965,9 +965,8 @@ main (int argc, char *argv[])
    * We want to change only messages (gs do not like decimals in 0,1
    * format ;)
    */
-#if HAVE_LC_MESSAGES
-  setlocale (LC_MESSAGES, "");
-#endif
+  setlocale (LC_ALL, "");
+  setlocale (LC_NUMERIC, "C");
   setlocale (LC_CTYPE, "");
 #ifdef LC_PAPER
   setlocale (LC_PAPER, "");

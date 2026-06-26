@@ -1213,7 +1213,8 @@ read_special_escape (InputStream *is, Token *token)
   /* Get escape name. */
   for (i = 0; i < sizeof (escname) - 1 && (ch = is_getc (is)) != EOF; i++)
     {
-      if (!isalnum (ch))
+      if (!((ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'Z') ||
+	    (ch >= 'a' && ch <= 'z')))
 	{
 	  is_ungetc (ch, is);
 	  break;
