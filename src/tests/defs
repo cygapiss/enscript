@@ -10,7 +10,7 @@ export ENSCRIPT_LIBRARY
 output=testout.ps
 
 asciifiles="$srcdir/defs $srcdir/ascii.test $srcdir/../psgen.c"
-binaryfiles="../enscript ../mkafmmap"
+binaryfiles="../enscript.exe ../mkafmmap.exe"
 
 enscript="../enscript"
 
