@@ -2608,7 +2608,7 @@ Mandatory arguments to long options are mandatory for short options too.\n\
   -v, --verbose              tell what we are doing\n\
   -V, --version              print version number\n\
   -w, --language=LANG        set output language to LANG\n\
-  -W, --options=APP,OPTION   pass option OPTION to helper application APP\n\
+  -W, --option=APP,OPTION   pass option OPTION to helper application APP\n\
   -X, --encoding=NAME        use input encoding NAME\n\
   -z, --no-formfeed          do not interpret form feed characters\n\
   -Z, --pass-through         pass through PostScript and PCL files\n\

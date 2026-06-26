@@ -398,7 +398,7 @@ generate RTF (Rich Text Format)
 generate ANSI terminal control codes
 .RE
 .TP 8
-.B \-W \f2app\f1,\f2option\f3, \-\-language\f3=\f2app\f1,\f2option\f3
+.B \-W, \-\-option=\f2app,option\f3
 pass the option \f2option\f3 to helper application \f2app\f3.
 .TP 8
 .B \-X \f2name\f3, \-\-encoding=\f2name\f3
@@ -480,6 +480,10 @@ cookies from the beginning of the file.
 .TP 8
 .B \-\-color\f1[\f3=\f2bool\f1]\f3
 Use colors in the highlighting outputs.
+.TP 8
+.B \-\-continuous\-page\-numbers
+Count page numbers across input files. Don't restart numbering at
+beginning of each file.
 .TP 8
 .B \-\-download\-font=\f2fontname\f3
 Include the font description file (\f2.pfa\f1 or \f2.pfb\f1 file) of
