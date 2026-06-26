@@ -1951,7 +1951,7 @@ get_next_token (InputStream *is, double linestart, double linepos,
 			  bufpos--;
 			}
 		      /* Check the octal notations "\\%03o". */
-		      else if (bufpos - 2 > w
+		      else if (bufpos > 2 && bufpos - 2 > w
 			       && ISOCTAL (buffer[bufpos])
 			       && ISOCTAL (buffer[bufpos - 1])
 			       && ISOCTAL (buffer[bufpos - 2])
