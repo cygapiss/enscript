@@ -23,8 +23,8 @@
 
 noinst_LIBRARIES = libafm.a
 libafm_a_SOURCES = afm.c afmparse.c strhash.c e_88591euro.c e_88591.c e_88592.c	\
-e_88593.c e_88594.c e_88595.c e_88597.c e_88599.c e_885915.c e_885910.c e_pc.c	\
-e_mac.c e_vms.c e_hp8.c e_koi8.c deffont.c
+e_88593.c e_88594.c e_88595.c e_88597.c e_88599.c e_885910.c e_885913.c e_885915.c \
+e_pc.c e_mac.c e_vms.c e_hp8.c e_koi8.c deffont.c
 
 noinst_HEADERS = afm.h afmint.h strhash.h
 

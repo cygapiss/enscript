@@ -172,6 +172,14 @@ read_config (char *path, char *file)
 	{
 	  token2 = GET_TOKEN (NULL);
 	  CHECK_TOKEN ();
+	  if (!strcasecmp("LC_CTYPE", token2))
+	    {
+	      char * codeset = nl_langinfo(_NL_CTYPE_CODESET_NAME);
+	      if (codeset && !strncasecmp(codeset, "iso", 3))
+		token2 = codeset;
+	      else
+		token2 = "885915";
+	    }
 	  xfree (encoding_name);
 	  encoding_name = xstrdup (token2);
 	}
@@ -979,6 +987,11 @@ read_font_info (void)
 
 	    case ENC_ISO_8859_10:
 	      (void) afm_font_encoding (font, AFM_ENCODING_ISO_8859_10,
+					enc_flags);
+	      break;
+
+	    case ENC_ISO_8859_13:
+	      (void) afm_font_encoding (font, AFM_ENCODING_ISO_8859_13,
 					enc_flags);
 	      break;
 

@@ -1,0 +1,291 @@
+		ISO-8859-13 (ISO Latin7) character set
+
+octal	hex	PostScript	HTML entity	character
+----------------------------------------------------------------------
+000	0x00	non-printable
+001	0x01	non-printable
+002	0x02	non-printable
+003	0x03	non-printable
+004	0x04	non-printable
+005	0x05	non-printable
+006	0x06	non-printable
+007	0x07	non-printable
+
+010	0x08	non-printable
+011	0x09	non-printable
+012	0x0a	non-printable
+013	0x0b	non-printable
+014	0x0c	non-printable
+015	0x0d	non-printable
+016	0x0e	non-printable
+017	0x0f	non-printable
+
+020	0x10	non-printable
+021	0x11	non-printable
+022	0x12	non-printable
+023	0x13	non-printable
+024	0x14	non-printable
+025	0x15	non-printable
+026	0x16	non-printable
+027	0x17	non-printable
+
+030	0x18	non-printable
+031	0x19	non-printable
+032	0x1a	non-printable
+033	0x1b	non-printable
+034	0x1c	non-printable
+035	0x1d	non-printable
+036	0x1e	non-printable
+037	0x1f	non-printable
+
+040	0x20	/space
+041	0x21	/exclam
+042	0x22	/quotedbl
+043	0x23	/numbersign
+044	0x24	/dollar
+045	0x25	/percent
+046	0x26	/ampersand
+047	0x27	/quoteright
+
+050	0x28	/parenleft
+051	0x29	/parenright
+052	0x2a	/asterisk
+053	0x2b	/plus
+054	0x2c	/comma
+055	0x2d	/minus
+056	0x2e	/period
+057	0x2f	/slash
+
+060	0x30	/zero
+061	0x31	/one
+062	0x32	/two
+063	0x33	/three
+064	0x34	/four
+065	0x35	/five
+066	0x36	/six
+067	0x37	/seven
+
+070	0x38	/eight
+071	0x39	/nine
+072	0x3a	/colon
+073	0x3b	/semicolon
+074	0x3c	/less
+075	0x3d	/equal
+076	0x3e	/greater
+077	0x3f	/question
+
+0100	0x40	/at
+0101	0x41	/A
+0102	0x42	/B
+0103	0x43	/C
+0104	0x44	/D
+0105	0x45	/E
+0106	0x46	/F
+0107	0x47	/G
+
+0110	0x48	/H
+0111	0x49	/I
+0112	0x4a	/J
+0113	0x4b	/K
+0114	0x4c	/L
+0115	0x4d	/M
+0116	0x4e	/N
+0117	0x4f	/O
+
+0120	0x50	/P
+0121	0x51	/Q
+0122	0x52	/R
+0123	0x53	/S
+0124	0x54	/T
+0125	0x55	/U
+0126	0x56	/V
+0127	0x57	/W
+
+0130	0x58	/X
+0131	0x59	/Y
+0132	0x5a	/Z
+0133	0x5b	/bracketleft
+0134	0x5c	/backslash
+0135	0x5d	/bracketright
+0136	0x5e	/asciicircum
+0137	0x5f	/underscore
+
+0140	0x60	/quoteleft
+0141	0x61	/a
+0142	0x62	/b
+0143	0x63	/c
+0144	0x64	/d
+0145	0x65	/e
+0146	0x66	/f
+0147	0x67	/g
+
+0150	0x68	/h
+0151	0x69	/i
+0152	0x6a	/j
+0153	0x6b	/k
+0154	0x6c	/l
+0155	0x6d	/m
+0156	0x6e	/n
+0157	0x6f	/o
+
+0160	0x70	/p
+0161	0x71	/q
+0162	0x72	/r
+0163	0x73	/s
+0164	0x74	/t
+0165	0x75	/u
+0166	0x76	/v
+0167	0x77	/w
+
+0170	0x78	/x
+0171	0x79	/y
+0172	0x7a	/z
+0173	0x7b	/braceleft
+0174	0x7c	/bar
+0175	0x7d	/braceright
+0176	0x7e	/asciitilde
+0177	0x7f	non-printable
+
+0200	0x80	non-printable
+0201	0x81	non-printable
+0202	0x82	non-printable
+0203	0x83	non-printable
+0204	0x84	non-printable
+0205	0x85	non-printable
+0206	0x86	non-printable
+0207	0x87	non-printable
+
+0210	0x88	non-printable
+0211	0x89	non-printable
+0212	0x8a	non-printable
+0213	0x8b	non-printable
+0214	0x8c	non-printable
+0215	0x8d	non-printable
+0216	0x8e	non-printable
+0217	0x8f	non-printable
+
+0220	0x90	non-printable
+0221	0x91	non-printable
+0222	0x92	non-printable
+0223	0x93	non-printable
+0224	0x94	non-printable
+0225	0x95	non-printable
+0226	0x96	non-printable
+0227	0x97	non-printable
+
+0230	0x98	non-printable
+0231	0x99	non-printable
+0232	0x9a	non-printable
+0233	0x9b	non-printable
+0234	0x9c	non-printable
+0235	0x9d	non-printable
+0236	0x9e	non-printable
+0237	0x9f	non-printable
+
+0240	0xa0	/space
+0241	0xa1	/quotedblright
+0242	0xa2	/cent
+0243	0xa3	/sterling
+0244	0xa4	/currency
+0245	0xa5	/quotedblbase
+0246	0xa6	/brokenbar
+0247	0xa7	/section
+
+0250	0xa8	/Oslash
+0251	0xa9	/copyright
+0252	0xaa	/Rcedilla
+0253	0xab	/guillemotleft
+0254	0xac	/logicalnot
+0255	0xad	/hyphen
+0256	0xae	/registered
+0257	0xaf	/AE
+
+0260	0xb0	/degree
+0261	0xb1	/plusminus
+0262	0xb2	/twosuperior
+0263	0xb3	/threesuperior
+0264	0xb4	/quotedblleft
+0265	0xb5	/mu
+0266	0xb6	/paragraph
+0267	0xb7	/bullet
+
+0270	0xb8	/oslash
+0271	0xb9	/onesuperior
+0272	0xba	/rcedilla
+0273	0xbb	/guillemotright
+0274	0xbc	/onequarter
+0275	0xbd	/onehalf
+0276	0xbe	/threequarters
+0277	0xbf	/ae
+
+0300	0xc0	/Aogonek
+0301	0xc1	/Iogonek
+0302	0xc2	/Amacron
+0303	0xc3	/Cacute
+0304	0xc4	/Adieresis
+0305	0xc5	/Aring
+0306	0xc6	/Eogonek
+0307	0xc7	/Emacron
+
+0310	0xc8	/Ccaron
+0311	0xc9	/Eacute
+0312	0xca	/Zacute
+0313	0xcb	/Edotaccent
+0314	0xcc	/Gcedilla
+0315	0xcd	/Kcedilla
+0316	0xce	/Imacron
+0317	0xcf	/Lcedilla
+
+0320	0xd0	/Scaron
+0321	0xd1	/Nacute
+0322	0xd2	/Ncedilla
+0323	0xd3	/Oacute
+0324	0xd4	/Omacron
+0325	0xd5	/Otilde
+0326	0xd6	/Odieresis
+0327	0xd7	/multiply
+
+0330	0xd8	/Uogonek
+0331	0xd9	/Lslash
+0332	0xda	/Sacute
+0333	0xdb	/Umacron
+0334	0xdc	/Udieresis
+0335	0xdd	/Zdotaccent
+0336	0xde	/Zcaron
+0337	0xdf	/germandbls
+
+0340	0xe0	/aogonek
+0341	0xe1	/iogonek
+0342	0xe2	/amacron
+0343	0xe3	/cacute
+0344	0xe4	/adieresis
+0345	0xe5	/aring
+0346	0xe6	/eogonek
+0347	0xe7	/emacron
+
+0350	0xe8	/ccaron
+0351	0xe9	/eacute
+0352	0xea	/zacute
+0353	0xeb	/edotaccent
+0354	0xec	/gcedilla
+0355	0xed	/kcedilla
+0356	0xee	/imacron
+0357	0xef	/lcedilla
+
+0360	0xf0	/scaron
+0361	0xf1	/nacute
+0362	0xf2	/ncedilla
+0363	0xf3	/oacute
+0364	0xf4	/omacron
+0365	0xf5	/otilde
+0366	0xf6	/odieresis
+0367	0xf7	/divide
+
+0370	0xf8	/uogonek
+0371	0xf9	/lslash
+0372	0xfa	/sacute
+0373	0xfb	/umacron
+0374	0xfc	/udieresis
+0375	0xfd	/zdotaccent
+0376	0xfe	/zcaron
+0377	0xff	/quoteright

@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 #
 # Create encoding vectors from the `*.txt' encoding files.
 # Copyright (c) 1995-1998 Markku Rossi

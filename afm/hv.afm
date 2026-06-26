@@ -19,7 +19,7 @@ CapHeight 718
 XHeight 523
 Ascender 718
 Descender -207
-StartCharMetrics 228
+StartCharMetrics 229
 C 32 ; WX 278 ; N space ; B 0 0 0 0 ;
 C 33 ; WX 278 ; N exclam ; B 90 0 187 718 ;
 C 34 ; WX 355 ; N quotedbl ; B 70 463 285 718 ;
@@ -181,6 +181,7 @@ C -1 ; WX 556 ; N egrave ; B 40 -15 516 734 ;
 C -1 ; WX 333 ; N twosuperior ; B 4 281 323 703 ;
 C -1 ; WX 556 ; N eacute ; B 40 -15 516 734 ;
 C -1 ; WX 556 ; N otilde ; B 35 -14 521 722 ;
+C -1 ; WX 833 ; N Euro ; B 73 0 761 718 ;
 C -1 ; WX 667 ; N Aacute ; B 14 0 654 929 ;
 C -1 ; WX 556 ; N ocircumflex ; B 35 -14 521 734 ;
 C -1 ; WX 500 ; N yacute ; B 11 -214 489 734 ;
@@ -549,7 +550,7 @@ KPX z o -15
 KPX z e -15
 EndKernPairs
 EndKernData
-StartComposites 58
+StartComposites 59
 CC Aacute 2 ; PCC A 0 0 ; PCC acute 167 195 ;
 CC Acircumflex 2 ; PCC A 0 0 ; PCC circumflex 167 195 ;
 CC Adieresis 2 ; PCC A 0 0 ; PCC dieresis 167 195 ;
@@ -600,6 +601,7 @@ CC ocircumflex 2 ; PCC o 0 0 ; PCC circumflex 112 0 ;
 CC odieresis 2 ; PCC o 0 0 ; PCC dieresis 112 0 ;
 CC ograve 2 ; PCC o 0 0 ; PCC grave 112 0 ;
 CC otilde 2 ; PCC o 0 0 ; PCC tilde 112 0 ;
+CC Euro 2 ; PCC C 0 0 ; PCC equal 0 0 ;
 CC scaron 2 ; PCC s 0 0 ; PCC caron 84 0 ;
 CC uacute 2 ; PCC u 0 0 ; PCC acute 112 0 ;
 CC ucircumflex 2 ; PCC u 0 0 ; PCC circumflex 112 0 ;

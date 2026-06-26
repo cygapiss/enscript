@@ -257,6 +257,7 @@ extern AFMEncodingTable afm_88595_encoding[];
 extern AFMEncodingTable afm_88597_encoding[];
 extern AFMEncodingTable afm_88599_encoding[];
 extern AFMEncodingTable afm_885910_encoding[];
+extern AFMEncodingTable afm_885913_encoding[];
 extern AFMEncodingTable afm_885915_encoding[];
 extern AFMEncodingTable afm_ibmpc_encoding[];
 extern AFMEncodingTable afm_mac_encoding[];

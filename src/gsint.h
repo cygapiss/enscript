@@ -108,6 +108,7 @@ extern double atan2 ___P ((double, double));
 
 #if HAVE_LC_MESSAGES
 #include <locale.h>
+#include <langinfo.h>
 #endif
 
 #ifndef HAVE_GETCWD
@@ -177,6 +178,7 @@ typedef enum
   ENC_ISO_8859_7,
   ENC_ISO_8859_9,
   ENC_ISO_8859_10,
+  ENC_ISO_8859_13,
   ENC_ISO_8859_15,
   ENC_ASCII,
   ENC_ASCII_FISE,
