@@ -1120,9 +1120,16 @@ download_font (char *name)
       buffer_append (&fname, ".pfb");
       if (stat (buffer_ptr (&fname), &stat_st) != 0)
 	{
-	  /* Couldn't find font description file, nothing to download. */
-	  buffer_uninit (&fname);
-	  return;
+	  /* .eps */
+	  buffer_clear (&fname);
+	  buffer_append (&fname, prefix);
+	  buffer_append (&fname, ".eps");
+	  if (stat (buffer_ptr (&fname), &stat_st) != 0)
+	    {
+	      /* Couldn't find font description file, nothing to download. */
+	      buffer_uninit (&fname);
+	      return;
+	    }
 	}
     }
 

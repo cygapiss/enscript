@@ -29,9 +29,12 @@ hvnbo.afm hvno.afm hvo.afm ncb.afm ncbi.afm nci.afm ncr.afm pob.afm	\
 pobi.afm poi.afm por.afm sy.afm tib.afm tibi.afm tii.afm tir.afm	\
 zcmi.afm zd.afm
 
-public_fonts = matrix.afm matrix.pfa
+public_fonts = matrix.afm matrix.eps
 
 afmdir = $(pkgdatadir)/afm
 dist_afm_DATA = font.map $(default_afm) $(public_fonts) MustRead.html
 
 EXTRA_DIST = ChangeLog.old
+
+matrix.eps: matrix.pfa
+	cp matrix.pfa matrix.eps
