@@ -49,7 +49,7 @@ DefaultFancyHeader: enscript
 DefaultMedia: @media@
 
 # Where output goes as a default: `printer' or `stdout'
-DefaultOutputMethod: printer
+DefaultOutputMethod: stdout
 
 # Include following font files to all PostScript outputs.
 #
