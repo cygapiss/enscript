@@ -133,7 +133,7 @@ main (int argc, char *argv[])
       int option_index = 0;
       int c;
 
-      c = getopt_long (argc, argv, "p:h", long_options, &option_index);
+      c = getopt_long (argc, argv, "p:hV", long_options, &option_index);
       if (c == -1)
 	break;
 
