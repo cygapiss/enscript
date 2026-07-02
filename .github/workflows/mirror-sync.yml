@@ -1,0 +1,102 @@
+name: Mirror sync from upstream
+
+# Install on mirror repo branch msys2-apiss-mirror-sync (workflows live here, not on master).
+# Layout: docs/mirror-init.md#tooling-branch-layout
+# Copy this file to: .github/workflows/mirror-sync.yml on that branch
+# Per-repo config: config/mirror-sync/<repo-name>.json in msys2-apiss-sync;
+#   CI downloads it at runtime (see mirrorSyncConfigUrl); not committed on mirror repos.
+# master (or configured mirror branches) holds upstream history only;
+# do not commit workflows to mirrored branches.
+#
+# mirror-sync CLI: mirror-sync.mjs downloaded at runtime from msys2-apiss-sync (see MIRROR_SYNC_BUNDLE_URL).
+#
+# Triggers (mirror-poll -> mirror-sync and mirror-sync -> mirror-merge both use workflow_dispatch API):
+#   mirror-poll -> mirror-sync: gh workflow run mirror-sync.yml on ref msys2-apiss-mirror-sync
+#     with inputs.event_type=workflow_dispatch_mirror_sync.
+#   mirror-sync -> mirror-merge: gh workflow run mirror-merge.yml on ref msys2-apiss-mirror-merge
+#     with inputs.event_type=workflow_dispatch_mirror_merge (Notify step; package mirrors only).
+
+on:
+  workflow_dispatch:
+    inputs:
+      event_type:
+        description: 'mirror-poll dispatch label'
+        required: false
+        default: workflow_dispatch_mirror_sync
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Log trigger
+        run: |
+          echo "event=${{ github.event_name }}"
+          echo "event_type=${{ inputs.event_type }}"
+
+      - name: Checkout mirror repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          # Optional PAT with contents:write on this mirror; falls back to github.token.
+          token: ${{ secrets.SYNC_DISPATCH_TOKEN || github.token }}
+
+      - name: Download mirror-sync config
+        run: |
+          set -euo pipefail
+          mkdir -p .github
+          curl -fsSL -o .github/mirror-sync.json \
+            "https://raw.githubusercontent.com/cygapiss/msys2-apiss-sync/main/config/mirror-sync/${{ github.event.repository.name }}.json"
+
+      - name: Read push transport
+        id: push
+        run: |
+          set -euo pipefail
+          CONFIG=".github/mirror-sync.json"
+          if [ ! -f "${CONFIG}" ]; then
+            echo "Missing ${CONFIG} on msys2-apiss-mirror-sync branch"
+            exit 1
+          fi
+          PUSH_VIA_SSH="$(jq -r '.PushViaSsh // false' "${CONFIG}")"
+          echo "via_ssh=${PUSH_VIA_SSH}" >> "$GITHUB_OUTPUT"
+
+      - name: Configure SSH push
+        if: steps.push.outputs.via_ssh == 'true'
+        uses: webfactory/ssh-agent@v0.10.0
+        with:
+          ssh-private-key: ${{ secrets.MIRROR_PUSH_SSH_KEY }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '26'
+
+      - name: Download mirror-sync CLI
+        run: |
+          set -euo pipefail
+          mkdir -p .github/toolings
+          curl -fsSL -o .github/toolings/mirror-sync.mjs \
+            "https://raw.githubusercontent.com/cygapiss/msys2-apiss-sync/main/config/mirror-template/toolings/mirror-sync.mjs"
+
+      - name: Run mirror sync
+        id: sync
+        run: |
+          set -euo pipefail
+          node .github/toolings/mirror-sync.mjs \
+            --repo-path "$GITHUB_WORKSPACE" \
+            --event-type "${{ inputs.event_type }}"
+
+      - name: Notify downstream
+        if: steps.sync.outputs.dispatch_mirror_merge == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh workflow run mirror-merge.yml \
+            --repo "${{ steps.sync.outputs.notify_repository }}" \
+            --ref msys2-apiss-mirror-merge \
+            -f "event_type=${{ steps.sync.outputs.notify_event_type }}"
